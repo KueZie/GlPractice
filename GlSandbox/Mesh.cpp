@@ -8,7 +8,7 @@ Mesh::Mesh(Vertex* verticies, unsigned int num_verticies)
 	glGenVertexArrays(1, &m_vertex_array_object);
 	glBindVertexArray(m_vertex_array_object);
 
-	glGenBuffers(NUM_BUFFERS, m_vertex_array_buffers);
+	glGenBuffers(1, m_vertex_array_buffers);
 	glBindBuffer(GL_ARRAY_BUFFER, m_vertex_array_buffers[POSITION_VB]);
 	glBufferData(GL_ARRAY_BUFFER, sizeof(verticies[0]) * m_num_verticies, verticies, GL_STATIC_DRAW);
 

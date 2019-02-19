@@ -79,7 +79,7 @@ GLuint Shader::CreateShader(const std::string& txt, GLuint type)
 	const GLchar* p[1] = { txt.c_str() };
 	GLint l[1] = { txt.length() };
 	
-	glShaderSource(shader, (GLsizei)1, (GLchar**)p, l);
+	glShaderSource(shader, (GLsizei)1, (GLchar**)p, 0);
 	glCompileShader(shader);
 
 	return shader;
